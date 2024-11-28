@@ -1,0 +1,389 @@
+/* General Styles */
+/* Basic reset for body, with gradient background and flexible layout */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Gradient background */
+  font-family: 'Poppins', sans-serif; /* Font styling */
+  color: white; /* Text color */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between elements */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styles */
+/* Styling for the page header */
+header {
+  text-align: center; /* Center-align content */
+  padding: 1em 0; /* Vertical padding */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  border-bottom: 2px solid #00ffdd; /* Bottom border for separation */
+  position: relative; /* Relative positioning for contained elements */
+}
+
+/* Header title styling */
+header h1 {
+  font-size: 3.5em; /* Large text */
+  color: #00ffdd; /* Highlight color */
+  text-shadow: 0 0 20px rgba(0, 255, 221, 0.8), 0 0 30px rgba(0, 255, 221, 0.8); /* Glow effect */
+  margin-bottom: 20px; /* Space below title */
+}
+
+/* Navigation Styles */
+/* Layout for navigation menu */
+nav {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center-align links */
+  gap: 30px; /* Spacing between links */
+  flex-wrap: wrap; /* Wrap links on smaller screens */
+}
+
+/* Styling for navigation links */
+nav a {
+  display: flex; /* Flex layout for alignment */
+  align-items: center; /* Center-align content vertically */
+  justify-content: center; /* Center-align content horizontally */
+  text-decoration: none; /* Remove underline */
+  color: #00ffdd; /* Text color */
+  background: transparent; /* Transparent background */
+  padding: 20px 30px; /* Padding for clickable area */
+  font-size: 1.5em; /* Font size */
+  font-weight: 600; /* Bold text */
+  border: 2px solid #00ffdd; /* Border styling */
+  border-radius: 30px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  position: relative; /* For pseudo-element positioning */
+}
+
+/* Icon styling within navigation links */
+nav a i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 2em; /* Larger icon size */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  transform: scale(1.1); /* Slightly enlarge */
+  background: #00ffdd; /* Highlight background */
+  color: #24243e; /* Darker text */
+}
+
+/* Additional hover effect using pseudo-element */
+nav a::before {
+  content: ""; /* Empty content for background effect */
+  position: absolute; /* Position relative to parent */
+  top: 0; /* Cover full area */
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: #00ffdd; /* Highlight color */
+  z-index: -1; /* Behind the text */
+  border-radius: 30px; /* Match button radius */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s ease; /* Smooth fade */
+}
+
+/* Make background visible on hover */
+nav a:hover::before {
+  opacity: 1;
+}
+
+/* Main Section Styles */
+/* Main content area */
+main {
+  flex-grow: 1; /* Expand to fill available space */
+  display: flex; /* Center-align content */
+  justify-content: center; 
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4); /* Slightly transparent background */
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Padding around content */
+  border-top: 2px solid #00ffdd; /* Separator line */
+}
+
+/* Container for specific page content */
+.container {
+  display: flex; /* Flexible layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Center horizontally */
+  height: 100%; /* Full height */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in dimensions */
+  max-width: 800px; /* Limit width */
+  margin: 20px auto; /* Center on page */
+  padding: 20px; /* Internal spacing */
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Depth effect */
+}
+
+/* Title styling for sections */
+.title {
+  font-size: 3em; /* Large text */
+  color: #00ffdd; /* Highlight color */
+  text-align: center; /* Center-align */
+  font-weight: 600; /* Bold font */
+  text-shadow: 0 0 20px rgba(0, 255, 221, 0.8), 0 0 30px rgba(0, 255, 221, 0.8); /* Glow effect */
+  margin: 20px 0; /* Space above and below */
+}
+
+/* Form container */
+.form-container {
+  width: 100%; /* Full width */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center-align form */
+  text-align: center; /* Center-align text */
+  margin-top: 20px; /* Space above */
+  padding-bottom: 50px; /* Space below */
+}
+
+/* Form styling */
+form {
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 30px; /* Internal spacing */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Depth effect */
+  max-width: 500px; /* Limit width */
+  width: 100%; /* Full width */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align elements */
+}
+
+/* Form labels */
+label {
+  font-size: 1.8em; /* Large text */
+  margin-bottom: 10px; /* Space below */
+  color: #00ffdd; /* Highlight color */
+}
+
+/* Text input fields */
+input[type="text"] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Internal spacing */
+  margin-bottom: 20px; /* Space below */
+  font-size: 1.2em; /* Font size */
+  border: 2px solid #00ffdd; /* Highlight border */
+  border-radius: 5px; /* Rounded corners */
+  background: transparent; /* Transparent background */
+  color: white; /* Text color */
+}
+
+/* File input field */
+input[type="file"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Internal spacing */
+  margin-bottom: 20px; /* Space below */
+  font-size: 1em; /* Font size */
+  border: 2px solid #00ffdd; /* Highlight border */
+  border-radius: 5px; /* Rounded corners */
+  background: transparent; /* Transparent background */
+  color: white; /* Text color */
+}
+
+/* Transcription Display Section */
+/* Container for transcribed text or outputs */
+.transcription-container {
+  margin-top: 30px; /* Space above */
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  padding: 25px; /* Internal spacing */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Limit width */
+  text-align: justify; /* Align text for readability */
+}
+
+/* Transcription text styling */
+.transcription-container p {
+  font-size: 1.4em; /* Text size */
+  line-height: 1.8; /* Line spacing for readability */
+  color: #fff; /* White text */
+}
+
+/* Textarea input field */
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Internal spacing */
+  margin-bottom: 20px; /* Space below */
+  font-size: 1.2em; /* Text size */
+  border: 2px solid #00ffdd; /* Highlight border */
+  border-radius: 5px; /* Rounded corners */
+  background: transparent; /* Transparent background */
+  color: white; /* Text color */
+  resize: vertical; /* Allow resizing vertically */
+  min-height: 150px; /* Minimum height for usability */
+}
+
+
+/* Scrollable Box for Essay and Chat History */
+/* Styling for a scrollable content box */
+.scrollable-box {
+  max-height: 300px; /* Limit height with scroll */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 15px; /* Internal spacing */
+  border: 2px solid #00ffdd; /* Highlight border */
+  border-radius: 10px; /* Rounded corners */
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  margin-bottom: 20px; /* Space below */
+  color: white; /* Text color */
+  line-height: 1.6; /* Line spacing for readability */
+  font-size: 1.2em; /* Font size */
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+/* Chat Bubbles */
+/* Container for chat history */
+.chat-history {
+  width: 100%; /* Full width */
+  margin: 20px 0; /* Vertical spacing */
+  max-height: 400px; /* Set maximum height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border: 1px solid #ddd; /* Border for better separation */
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #54ecf2;
+}
+
+/* Common styles for chat bubbles */
+.chat-bubble {
+  padding: 12px 20px; /* Internal spacing */
+  margin: 10px 0; /* Space between bubbles */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 1.2em; /* Font size */
+  line-height: 1.6; /* Line spacing */
+  width: fit-content; /* Adjust to content width */
+  max-width: 80%; /* Limit width for readability */
+}
+
+/* Chat bubble for user messages */
+.chat-bubble.user {
+  background-color: rgba(0, 255, 221, 0.2); /* Light highlight */
+  color: #000000; /* Text color */
+  text-align: left; /* Align text */
+  margin-left: auto; /* Align bubble to the right */
+}
+
+/* Chat bubble for bot messages */
+.chat-bubble.bot {
+  background-color: rgba(255, 255, 255, 0.1); /* Light gray background */
+  color: rgb(47, 0, 255); /* White text */
+  text-align: left; /* Align text */
+  margin-right: auto; /* Align bubble to the left */
+}
+
+/* Button Group */
+/* Layout for button groups */
+.button-group {
+  display: flex; /* Flex layout */
+  gap: 20px; /* Spacing between buttons */
+  align-items: center; /* Center-align items vertically */
+}
+
+/* Button Styling */
+/* General button styling */
+button, .button, .btn {
+  padding: 16px 30px; /* Button size */
+  font-size: 1.3em; /* Font size */
+  color: #fff; /* Text color */
+  background-color: #00ffdd; /* Highlight color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  display: inline-block; /* Inline-block for consistency */
+  text-decoration: none; /* Remove underline */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+button:hover, .button:hover, .btn:hover {
+  background-color: #00ccaa; /* Slightly darker highlight */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Ensure consistency for buttons */
+button.btn {
+  border: none; /* Remove border */
+}
+
+/* Responsive Design */
+/* Adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em; /* Smaller title */
+  }
+
+  .container {
+    padding: 10px; /* Less padding */
+  }
+
+  form input, textarea {
+    font-size: 1em; /* Smaller input text size */
+  }
+
+  button {
+    font-size: 1.1em; /* Smaller button text */
+  }
+
+  .chat-bubble {
+    font-size: 1em; /* Smaller chat bubble text */
+  }
+}
+
+/* Image Container Styles (For Image Generation Page) */
+/* Layout for image container */
+.image-container {
+  margin-top: 20px; /* Space above */
+  text-align: center; /* Center-align content */
+  padding: 20px; /* Internal spacing */
+}
+
+/* Styling for images */
+.image-container img {
+  max-width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #00ffdd; /* Highlight border */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Summary Display Section */
+/* Container for summaries */
+.summary-container {
+  margin-top: 30px; /* Space above */
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  padding: 25px; /* Internal spacing */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Limit width */
+  text-align: justify; /* Align text for readability */
+}
+
+/* Text styling for summaries */
+.summary-container p {
+  font-size: 1.4em; /* Text size */
+  line-height: 1.8; /* Line spacing for readability */
+  color: #fff; /* White text */
+}
+
+/* Main section text styling */
+main p {
+  font-size: 1.8em; /* Large text */
+  color: #fff; /* White text */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+  margin: 0; /* Remove margin */
+}
+
+/* Footer Styles */
+/* Styling for footer */
+footer {
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Internal spacing */
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  border-top: 2px solid #00ffdd; /* Top border for separation */
+  font-size: 1.2em; /* Font size */
+  color: #aaa; /* Light gray text */
+}

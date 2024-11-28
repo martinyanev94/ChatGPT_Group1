@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="title">Essay Generation</h2>
+    <div class="form-container">
+        <form method="POST">
+            <label for="topic">Enter Topic:</label>
+            <input type="text" id="topic" name="topic" required>
+
+            <!-- Container for Length, Tone, and Pages Select boxes to make them side by side -->
+            <div class="select-container">
+                <div class="select-box">
+                    <label for="length">Select Length:</label>
+                    <select id="length" name="length">
+                        <option value="short">Short</option>
+                        <option value="medium">Medium</option>
+                        <option value="long">Long</option>
+                    </select>
+                </div>
+
+                <div class="select-box">
+                    <label for="tone">Select Tone:</label>
+                    <select id="tone" name="tone">
+                        <option value="formal">Formal</option>
+                        <option value="informal">Informal</option>
+                        <option value="persuasive">Persuasive</option>
+                    </select>
+                </div>
+
+                <div class="select-box">
+                    <label for="pages">Select Pages:</label>
+                    <select id="pages" name="pages">
+                        <option value="1">1 Page</option>
+                        <option value="2">2 Pages</option>
+                        <option value="3">3 Pages</option>
+                        <option value="4">4 Pages</option>
+                        <option value="5">5 Pages</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Button Container for side by side alignment -->
+            <div class="button-container">
+                <button type="submit" class="btn">Generate Essay</button>
+                {% if essay %}
+                    <a href="{{ download_link }}" class="btn">Download Essay</a>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+    {% if essay %}
+    <div class="output-container">
+        <h3>Generated Essay:</h3>
+        <div class="scrollable-box">{{ essay }}</div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
