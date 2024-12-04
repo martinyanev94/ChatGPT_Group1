@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <!-- Title Section -->
+        <h2 class="title">Audio Transcription</h2>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <form method="POST" enctype="multipart/form-data">
+                <label for="audio">Upload Audio File:</label>
+                <input type="file" id="audio" name="audio" accept=".mp3" required>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn">Transcribe</button>
+                    
+                    {% if transcription %}
+                    <a href="{{ transcript_link }}" class="btn">Download Transcription</a>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+
+        <!-- Transcription Display Section -->
+        {% if transcription %}
+        <div class="transcription-container">
+            <h3>Transcription:</h3>
+            <p>{{ transcription }}</p>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

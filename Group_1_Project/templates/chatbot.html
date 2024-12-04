@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="title">ChatBot</h2>
+    
+    <!-- Chat Form -->
+    <form method="POST" action="{{ url_for('chatbot') }}" style="display: inline;">
+        <label for="message">Enter Message:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Clear Chat Form -->
+    <form method="POST" action="{{ url_for('clear_chat') }}" style="display: inline;">
+        <button type="submit">Clear Chat</button>
+    </form>
+
+    {% if chat_history %}
+    <!-- Chat History Display -->
+    <div class="chat-history">
+        {% for chat in chat_history %}
+        <div class="chat-bubble user">{{ chat.user }}</div>
+        <div class="chat-bubble bot">{{ chat.bot }}</div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="chat-history">
+        <p>No chat history available. Start a conversation!</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+User: hi
+Bot: Hello! How can I assist you today?
+
+User: hello
+Bot: Hello! How can I assist you today?
+
+User: how you doing
+Bot: I'm just a computer program, so I don't have feelings or emotions, but I'm here and ready to assist you with any questions or tasks you may have. How can I help you today?
+
+User: hello
+Bot: Hello! How can I assist you today?
+
+User: how you doing
+Bot: I'm just a computer program, so I don't have feelings or emotions like humans do. But thank you for asking! How can I assist you today?
+
+User: did you remember what questions i asked
+Bot: Yes, I remember some of the questions you asked. Can you remind me of specific questions you are referring to?
+
+User: what is asked before
+Bot: "what is asked before" is a question that is incomplete and does not specify what is being inquired about. Could you please provide more context or clarify your question?
+
+User: which question i asked earlier
+Bot: I'm sorry, I cannot view previous messages or questions that were asked. Could you please provide some context or repeat the question you are referring to?
+
+User: regarding remember
+Bot: Remembering something involves being able to recall it from one's memory, often triggered by specific cues or prompts. Memory is the cognitive process by which information is encoded, stored, and retrieved in the brain. Remembering can be influenced by various factors such as emotional significance, repetition, and context. It is an important aspect of human cognition and plays a significant role in learning, problem-solving, decision-making, and forming personal identities.
+
+User: hi
+Bot: Hello! How can I assist you today?
+
+User: where you have been located
+Bot: I am a virtual assistant, so I do not have a physical location. I exist in the digital space to provide information and assistance to users.
+
+User: hi
+Bot: Hello! How can I assist you today?
+
+User: bye
+Bot: Goodbye! Have a great day!
+
+User: hi
+Bot: Hello! How can I assist you today?
+
+User: how you doing
+Bot: I'm just a computer program, so I don't have feelings or emotions, but I'm here to help you with whatever you need. How can I assist you today?
+
+User: hi
+Bot: Hello! How can I assist you today?
+
+User: hello
+Bot: Hello! How can I assist you today?
+
+User: hi
+Bot: Hello! How can I assist you today?
+
+User: hello
+Bot: Hello! How can I assist you today?
+
+User: hi
+Bot: Hello! How can I assist you today?
+

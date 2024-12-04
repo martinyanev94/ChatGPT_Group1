@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <!-- Title Section -->
+        <h2 class="title">Text Summarizer</h2>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <form method="POST">
+                <label for="text">Enter Text:</label>
+                <textarea id="text" name="text" required></textarea>
+                <button type="submit">Summarize</button>
+            </form>
+        </div>
+
+        <!-- Summary Display Section -->
+        {% if summary %}
+        <div class="summary-container">
+            <p><strong>Summary:</strong></p>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <!-- Title Section -->
+        <h2 class="title">Image Generation</h2>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <form method="POST">
+                <label for="description">Image Description:</label>
+                <input type="text" id="description" name="description" required>
+
+                <!-- Button Container for side-by-side buttons -->
+                <div class="button-container">
+                    <button type="submit" class="btn">Generate Image</button>
+
+                    {% if image_url %}
+                        <!-- Download button -->
+                        <a href="{{ image_url }}" class="btn" download>Download Image</a>
+                        
+                        <!-- Dropdown for selecting download format, under the Download Image button -->
+                        <div class="format-container">
+                            <label for="format" class="format-label">Select Format:</label>
+                            <select id="format" name="format" class="format-select">
+                                <option value="png">PNG</option>
+                                <option value="jpeg">JPEG</option>
+                                <option value="jpg">JPG</option>
+                                <option value="gif">GIF</option>
+                            </select>
+                        </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+
+        <!-- Display Generated Image -->
+        {% if image_url %}
+        <div class="image-container">
+            <img src="{{ image_url }}" alt="Generated Image">
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
